@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+skinparam packageStyle rect
+actor student
+actor teacher
+rectangle peppi {
+  student -- (check grades)
+  (login) . (check grades) : <<include>>
+  teacher --(add grades)
+  (add grades) <. (login)  : <<include>>
+}
+@enduml
